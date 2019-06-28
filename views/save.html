@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>表單結果</title>
+</head>
+
+<body>
+  收到表單傳來的資料如下：
+  <table border="1">
+    <tr>
+      <td>欄位名稱</td>
+      <td>值</td>
+    </tr>
+    <% for (const item in body) { %>
+      <tr>
+        <td><%=item%></td>
+        <td><%=body[item]%></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+
+</html>
